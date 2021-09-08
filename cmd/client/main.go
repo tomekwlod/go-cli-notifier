@@ -24,7 +24,7 @@ func main() {
 
 	err := s.Switch()
 	if err != nil {
-		fmt.Printf("command switch error: %s", err)
+		fmt.Printf("command switch error: %v\n", err)
 		os.Exit(2)
 	}
 

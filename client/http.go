@@ -1,6 +1,9 @@
 package client
 
-import "net/http"
+import (
+	"net/http"
+	"time"
+)
 
 type HTTPClient struct {
 	client     *http.Client
@@ -12,4 +15,10 @@ func NewHTTPClient(uri string) HTTPClient {
 		BackendURI: uri,
 		client:     &http.Client{},
 	}
+}
+
+func (c HTTPClient) Create(t, m string, d time.Duration) ([]byte, error) {
+	res := []byte(`response for create reminder...`)
+	return res, nil
+	// the other methods in #5 '17
 }
